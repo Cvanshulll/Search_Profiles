@@ -1,11 +1,732 @@
-avatar: "https://cdn-userpic.codeforces.com/1844812/avatar/a8d165c4941d0a25.jpg"
-contribution: 0
-friendOfCount: 19
-handle: "cvanshul"
-lastOnlineTimeSeconds: 1656872136
-maxRank: "newbie"
-maxRating: 755
-rank: "newbie"
-rating: 597
-registrationTimeSeconds: 1609409500
-titlePhoto: "https://cdn-userpic.codeforces.com/1844812/title/9f751bae325ae5b3.jpg"
+{
+    "status": "Success",
+    "rating": 1065,
+    "stars": "1\u2605",
+    "highest_rating": 1452,
+    "global_rank": 156238,
+    "country_rank": 146433,
+    "user_details": {
+        "name": "Vanshul Choudhary",
+        "username": "cvanshulll",
+        "country": "India",
+        "student/professional": "Student",
+        "institution": "National Institute of Technology, Hamirpur"
+    },
+    "contests": [],
+    "contest_ratings": [
+        {
+            "code": "JUNE21C",
+            "getyear": "2021",
+            "getmonth": "6",
+            "getday": "14",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1452",
+            "rank": "19865",
+            "name": "June Challenge 2021 Division 3 (Rated)",
+            "end_date": "2021-06-14 15:00:00"
+        },
+        {
+            "code": "JULY21C",
+            "getyear": "2021",
+            "getmonth": "7",
+            "getday": "12",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1347",
+            "rank": "21499",
+            "name": "July Challenge 2021 Division 3 (Rated)",
+            "end_date": "2021-07-12 15:00:00"
+        },
+        {
+            "code": "START7C",
+            "getyear": "2021",
+            "getmonth": "7",
+            "getday": "25",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1313",
+            "rank": "7287",
+            "name": "CodeChef Starters 7 Division 3 (Rated)",
+            "end_date": "2021-07-25 19:00:00"
+        },
+        {
+            "code": "AUG21C",
+            "getyear": "2021",
+            "getmonth": "8",
+            "getday": "16",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1315",
+            "rank": "18492",
+            "name": "August Challenge 2021 Division 3 (Rated)",
+            "end_date": "2021-08-16 18:00:00"
+        },
+        {
+            "code": "START8C",
+            "getyear": "2021",
+            "getmonth": "8",
+            "getday": "16",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1246",
+            "rank": "4277",
+            "name": "CodeChef Starters 8 Division 3 (Rated)",
+            "end_date": "2021-08-16 20:00:00"
+        },
+        {
+            "code": "START9C",
+            "getyear": "2021",
+            "getmonth": "8",
+            "getday": "17",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1232",
+            "rank": "7506",
+            "name": "CodeChef Starters 9 Division 3 (Rated)",
+            "end_date": "2021-08-17 23:00:00"
+        },
+        {
+            "code": "COOK132C",
+            "getyear": "2021",
+            "getmonth": "8",
+            "getday": "23",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1311",
+            "rank": "4405",
+            "name": "August Cook-Off 2021 Division 3",
+            "end_date": "2021-08-23 00:30:04"
+        },
+        {
+            "code": "LTIME99C",
+            "getyear": "2021",
+            "getmonth": "8",
+            "getday": "28",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1319",
+            "rank": "7058",
+            "name": "August Lunchtime 2021 Division 3",
+            "end_date": "2021-08-28 22:30:04"
+        },
+        {
+            "code": "START10C",
+            "getyear": "2021",
+            "getmonth": "8",
+            "getday": "29",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1303",
+            "rank": "6085",
+            "name": "CodeChef Starters 10 Division 3 (Rated)",
+            "end_date": "2021-08-29 19:00:04"
+        },
+        {
+            "code": "SEPT21C",
+            "getyear": "2021",
+            "getmonth": "9",
+            "getday": "13",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1289",
+            "rank": "18488",
+            "name": "September Challenge 2021 Division 3 (Rated)",
+            "end_date": "2021-09-13 15:00:00"
+        },
+        {
+            "code": "LTIME101C",
+            "getyear": "2021",
+            "getmonth": "10",
+            "getday": "27",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1349",
+            "rank": "5858",
+            "name": "October Lunchtime 2021 Division 3",
+            "end_date": "2021-10-27 22:30:04"
+        },
+        {
+            "code": "CSNS21C",
+            "getyear": "2021",
+            "getmonth": "11",
+            "getday": "3",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1351",
+            "rank": "4267",
+            "name": "Code Senso Division 3 (Rated)",
+            "end_date": "2021-11-03 23:00:04"
+        },
+        {
+            "code": "NOV21C",
+            "getyear": "2021",
+            "getmonth": "11",
+            "getday": "15",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1328",
+            "rank": "16037",
+            "name": "November Challenge 2021 Division 3 (Rated)",
+            "end_date": "2021-11-15 15:00:00"
+        },
+        {
+            "code": "START18C",
+            "getyear": "2021",
+            "getmonth": "11",
+            "getday": "22",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1246",
+            "rank": "7326",
+            "name": "CodeChef Starters 18 Division 3 (Rated)",
+            "end_date": "2021-11-22 23:00:00"
+        },
+        {
+            "code": "DEC21C",
+            "getyear": "2021",
+            "getmonth": "12",
+            "getday": "13",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1317",
+            "rank": "8532",
+            "name": "December Challenge 2021 Division 3 (Rated)",
+            "end_date": "2021-12-13 15:00:00"
+        },
+        {
+            "code": "START19C",
+            "getyear": "2021",
+            "getmonth": "12",
+            "getday": "13",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1350",
+            "rank": "3612",
+            "name": "CodeChef Starters 19 Division 3 (Rated)",
+            "end_date": "2021-12-13 17:00:04"
+        },
+        {
+            "code": "START20C",
+            "getyear": "2021",
+            "getmonth": "12",
+            "getday": "15",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1366",
+            "rank": "5351",
+            "name": "CodeChef Starters 20 Division 3 (Rated)",
+            "end_date": "2021-12-15 23:00:00"
+        },
+        {
+            "code": "START23C",
+            "getyear": "2022",
+            "getmonth": "1",
+            "getday": "26",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1398",
+            "rank": "7490",
+            "name": "CodeChef Starters 23 Division 3 (Rated)",
+            "end_date": "2022-01-26 23:00:00"
+        },
+        {
+            "code": "START24C",
+            "getyear": "2022",
+            "getmonth": "2",
+            "getday": "2",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1381",
+            "rank": "9305",
+            "name": "CodeChef Starters 24 Division 3 (Rated)",
+            "end_date": "2022-02-02 23:00:04"
+        },
+        {
+            "code": "START27D",
+            "getyear": "2022",
+            "getmonth": "2",
+            "getday": "23",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1263",
+            "rank": "2846",
+            "name": "CodeChef Starters 27 Division 4 (Rated)",
+            "end_date": "2022-02-23 23:00:06"
+        },
+        {
+            "code": "START28D",
+            "getyear": "2022",
+            "getmonth": "3",
+            "getday": "2",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1150",
+            "rank": "5173",
+            "name": "CodeChef Starters 28 Division 4 (Rated)",
+            "end_date": "2022-03-02 23:00:06"
+        },
+        {
+            "code": "START29D",
+            "getyear": "2022",
+            "getmonth": "3",
+            "getday": "9",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1075",
+            "rank": "5346",
+            "name": "CodeChef Starters 29 Division 4 (Rated)",
+            "end_date": "2022-03-09 23:00:06"
+        },
+        {
+            "code": "START33D",
+            "getyear": "2022",
+            "getmonth": "4",
+            "getday": "6",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1063",
+            "rank": "4659",
+            "name": "CodeChef Starters 33 Division 4 (Rated)",
+            "end_date": "2022-04-06 23:00:06"
+        },
+        {
+            "code": "START35D",
+            "getyear": "2022",
+            "getmonth": "4",
+            "getday": "20",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "954",
+            "rank": "8012",
+            "name": "Starters 35 Division 4 (Rated)",
+            "end_date": "2022-04-20 23:00:06"
+        },
+        {
+            "code": "START37D",
+            "getyear": "2022",
+            "getmonth": "5",
+            "getday": "4",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1049",
+            "rank": "3227",
+            "name": "Starters 37 Division 4 (Rated)",
+            "end_date": "2022-05-04 23:00:06"
+        },
+        {
+            "code": "COOK142D",
+            "getyear": "2022",
+            "getmonth": "6",
+            "getday": "5",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1085",
+            "rank": "3824",
+            "name": "June Cook-Off 2022 Division 4 (Rated)",
+            "end_date": "2022-06-05 22:30:06"
+        },
+        {
+            "code": "START43D",
+            "getyear": "2022",
+            "getmonth": "6",
+            "getday": "15",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1044",
+            "rank": "6476",
+            "name": "Starters 43 Division 4 (Rated)",
+            "end_date": "2022-06-15 23:00:06"
+        },
+        {
+            "code": "START44D",
+            "getyear": "2022",
+            "getmonth": "6",
+            "getday": "22",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1054",
+            "rank": "5357",
+            "name": "Starters 44 Division 4 (Rated)",
+            "end_date": "2022-06-22 23:00:06"
+        },
+        {
+            "code": "START46D",
+            "getyear": "2022",
+            "getmonth": "7",
+            "getday": "6",
+            "reason": null,
+            "penalised_in": null,
+            "rating": "1065",
+            "rank": "4803",
+            "name": "Starters 46 Division 4 (Rated)",
+            "end_date": "2022-07-06 23:00:06"
+        }
+    ],
+    "fully_solved": {
+        "count": 74,
+        "Practice": [
+            {
+                "name": "CRICRANK",
+                "link": "https://www.codechef.com/status/CRICRANK,cvanshulll"
+            },
+            {
+                "name": "FODCHAIN",
+                "link": "https://www.codechef.com/status/FODCHAIN,cvanshulll"
+            },
+            {
+                "name": "PENALTY",
+                "link": "https://www.codechef.com/status/PENALTY,cvanshulll"
+            },
+            {
+                "name": "BMI",
+                "link": "https://www.codechef.com/status/BMI,cvanshulll"
+            },
+            {
+                "name": "XLSQUARE",
+                "link": "https://www.codechef.com/status/XLSQUARE,cvanshulll"
+            },
+            {
+                "name": "PROBDIFF",
+                "link": "https://www.codechef.com/status/PROBDIFF,cvanshulll"
+            },
+            {
+                "name": "THREEQ",
+                "link": "https://www.codechef.com/status/THREEQ,cvanshulll"
+            },
+            {
+                "name": "TYRES",
+                "link": "https://www.codechef.com/status/TYRES,cvanshulll"
+            },
+            {
+                "name": "FAKEGCD",
+                "link": "https://www.codechef.com/status/FAKEGCD,cvanshulll"
+            },
+            {
+                "name": "LUCKYNUM",
+                "link": "https://www.codechef.com/status/LUCKYNUM,cvanshulll"
+            },
+            {
+                "name": "EQUALCOIN",
+                "link": "https://www.codechef.com/status/EQUALCOIN,cvanshulll"
+            },
+            {
+                "name": "HS08TEST",
+                "link": "https://www.codechef.com/status/HS08TEST,cvanshulll"
+            },
+            {
+                "name": "INTEST",
+                "link": "https://www.codechef.com/status/INTEST,cvanshulll"
+            },
+            {
+                "name": "FLOW004",
+                "link": "https://www.codechef.com/status/FLOW004,cvanshulll"
+            },
+            {
+                "name": "SMPAIR",
+                "link": "https://www.codechef.com/status/SMPAIR,cvanshulll"
+            },
+            {
+                "name": "ATM2",
+                "link": "https://www.codechef.com/status/ATM2,cvanshulll"
+            },
+            {
+                "name": "NONADJFLIP",
+                "link": "https://www.codechef.com/status/NONADJFLIP,cvanshulll"
+            },
+            {
+                "name": "INFERNO",
+                "link": "https://www.codechef.com/status/INFERNO,cvanshulll"
+            },
+            {
+                "name": "ISPAR",
+                "link": "https://www.codechef.com/status/ISPAR,cvanshulll"
+            },
+            {
+                "name": "SIMPLE_XOR",
+                "link": "https://www.codechef.com/status/SIMPLE_XOR,cvanshulll"
+            },
+            {
+                "name": "JOINING",
+                "link": "https://www.codechef.com/status/JOINING,cvanshulll"
+            },
+            {
+                "name": "ALTERADD",
+                "link": "https://www.codechef.com/status/ALTERADD,cvanshulll"
+            },
+            {
+                "name": "KNIGHTATTACK",
+                "link": "https://www.codechef.com/status/KNIGHTATTACK,cvanshulll"
+            }
+        ],
+        "CCSTART2": [
+            {
+                "name": "BUYPLSE",
+                "link": "https://www.codechef.com/CCSTART2/status/BUYPLSE,cvanshulll"
+            }
+        ],
+        "JUNE21C": [
+            {
+                "name": "COCONUT",
+                "link": "https://www.codechef.com/JUNE21C/status/COCONUT,cvanshulll"
+            }
+        ],
+        "JULY21C": [
+            {
+                "name": "EITA",
+                "link": "https://www.codechef.com/JULY21C/status/EITA,cvanshulll"
+            }
+        ],
+        "START7C": [
+            {
+                "name": "CHSFORMT",
+                "link": "https://www.codechef.com/START7C/status/CHSFORMT,cvanshulll"
+            }
+        ],
+        "AUG21C": [
+            {
+                "name": "OLYRANK",
+                "link": "https://www.codechef.com/AUG21C/status/OLYRANK,cvanshulll"
+            }
+        ],
+        "START9C": [
+            {
+                "name": "BLACKCEL",
+                "link": "https://www.codechef.com/START9C/status/BLACKCEL,cvanshulll"
+            }
+        ],
+        "COOK132C": [
+            {
+                "name": "WHICHDIV",
+                "link": "https://www.codechef.com/COOK132C/status/WHICHDIV,cvanshulll"
+            }
+        ],
+        "LTIME99C": [
+            {
+                "name": "PROGLANG",
+                "link": "https://www.codechef.com/LTIME99C/status/PROGLANG,cvanshulll"
+            }
+        ],
+        "START10C": [
+            {
+                "name": "HARDBET",
+                "link": "https://www.codechef.com/START10C/status/HARDBET,cvanshulll"
+            }
+        ],
+        "SEPT21C": [
+            {
+                "name": "TRAVELPS",
+                "link": "https://www.codechef.com/SEPT21C/status/TRAVELPS,cvanshulll"
+            }
+        ],
+        "SNCKQL21": [
+            {
+                "name": "LUCKYNUM",
+                "link": "https://www.codechef.com/SNCKQL21/status/LUCKYNUM,cvanshulll"
+            },
+            {
+                "name": "TESTSERIES",
+                "link": "https://www.codechef.com/SNCKQL21/status/TESTSERIES,cvanshulll"
+            }
+        ],
+        "LTIME101C": [
+            {
+                "name": "PROBCAT",
+                "link": "https://www.codechef.com/LTIME101C/status/PROBCAT,cvanshulll"
+            }
+        ],
+        "CSNS21C": [
+            {
+                "name": "DRUNKALK",
+                "link": "https://www.codechef.com/CSNS21C/status/DRUNKALK,cvanshulll"
+            }
+        ],
+        "NOV21C": [
+            {
+                "name": "CHEAPFUEL",
+                "link": "https://www.codechef.com/NOV21C/status/CHEAPFUEL,cvanshulll"
+            }
+        ],
+        "DEC21C": [
+            {
+                "name": "UTKPLC",
+                "link": "https://www.codechef.com/DEC21C/status/UTKPLC,cvanshulll"
+            }
+        ],
+        "START19C": [
+            {
+                "name": "CHEFCONTEST",
+                "link": "https://www.codechef.com/START19C/status/CHEFCONTEST,cvanshulll"
+            }
+        ],
+        "START20C": [
+            {
+                "name": "GENE01",
+                "link": "https://www.codechef.com/START20C/status/GENE01,cvanshulll"
+            }
+        ],
+        "START23C": [
+            {
+                "name": "CHFPROFIT",
+                "link": "https://www.codechef.com/START23C/status/CHFPROFIT,cvanshulll"
+            },
+            {
+                "name": "AVGOF3",
+                "link": "https://www.codechef.com/START23C/status/AVGOF3,cvanshulll"
+            }
+        ],
+        "START24C": [
+            {
+                "name": "BADMINTON",
+                "link": "https://www.codechef.com/START24C/status/BADMINTON,cvanshulll"
+            },
+            {
+                "name": "AVOIDCONTACT",
+                "link": "https://www.codechef.com/START24C/status/AVOIDCONTACT,cvanshulll"
+            }
+        ],
+        "START27D": [
+            {
+                "name": "SHOPCHANGE",
+                "link": "https://www.codechef.com/START27D/status/SHOPCHANGE,cvanshulll"
+            },
+            {
+                "name": "SALE",
+                "link": "https://www.codechef.com/START27D/status/SALE,cvanshulll"
+            },
+            {
+                "name": "BLACKJACK",
+                "link": "https://www.codechef.com/START27D/status/BLACKJACK,cvanshulll"
+            },
+            {
+                "name": "POLYBAGS",
+                "link": "https://www.codechef.com/START27D/status/POLYBAGS,cvanshulll"
+            }
+        ],
+        "START28D": [
+            {
+                "name": "INSTNOODLE",
+                "link": "https://www.codechef.com/START28D/status/INSTNOODLE,cvanshulll"
+            },
+            {
+                "name": "QUALIFY",
+                "link": "https://www.codechef.com/START28D/status/QUALIFY,cvanshulll"
+            },
+            {
+                "name": "SELFDEF",
+                "link": "https://www.codechef.com/START28D/status/SELFDEF,cvanshulll"
+            },
+            {
+                "name": "SUNDAY",
+                "link": "https://www.codechef.com/START28D/status/SUNDAY,cvanshulll"
+            }
+        ],
+        "START29D": [
+            {
+                "name": "FBC",
+                "link": "https://www.codechef.com/START29D/status/FBC,cvanshulll"
+            },
+            {
+                "name": "TYRE",
+                "link": "https://www.codechef.com/START29D/status/TYRE,cvanshulll"
+            }
+        ],
+        "START33D": [
+            {
+                "name": "CABS",
+                "link": "https://www.codechef.com/START33D/status/CABS,cvanshulll"
+            },
+            {
+                "name": "BUDGET_",
+                "link": "https://www.codechef.com/START33D/status/BUDGET_,cvanshulll"
+            },
+            {
+                "name": "MINCARS",
+                "link": "https://www.codechef.com/START33D/status/MINCARS,cvanshulll"
+            }
+        ],
+        "START35D": [
+            {
+                "name": "WATERREQ",
+                "link": "https://www.codechef.com/START35D/status/WATERREQ,cvanshulll"
+            },
+            {
+                "name": "JENGA",
+                "link": "https://www.codechef.com/START35D/status/JENGA,cvanshulll"
+            }
+        ],
+        "START37D": [
+            {
+                "name": "MINHEIGHT",
+                "link": "https://www.codechef.com/START37D/status/MINHEIGHT,cvanshulll"
+            },
+            {
+                "name": "MANGOES",
+                "link": "https://www.codechef.com/START37D/status/MANGOES,cvanshulll"
+            },
+            {
+                "name": "LAPTOPREC",
+                "link": "https://www.codechef.com/START37D/status/LAPTOPREC,cvanshulll"
+            }
+        ],
+        "COOK142D": [
+            {
+                "name": "ADVANCE",
+                "link": "https://www.codechef.com/COOK142D/status/ADVANCE,cvanshulll"
+            },
+            {
+                "name": "SONGS",
+                "link": "https://www.codechef.com/COOK142D/status/SONGS,cvanshulll"
+            },
+            {
+                "name": "FIRSTANDLAST",
+                "link": "https://www.codechef.com/COOK142D/status/FIRSTANDLAST,cvanshulll"
+            },
+            {
+                "name": "BREAKSTICK",
+                "link": "https://www.codechef.com/COOK142D/status/BREAKSTICK,cvanshulll"
+            }
+        ],
+        "START43D": [
+            {
+                "name": "BURGERS",
+                "link": "https://www.codechef.com/START43D/status/BURGERS,cvanshulll"
+            },
+            {
+                "name": "WAITTIME",
+                "link": "https://www.codechef.com/START43D/status/WAITTIME,cvanshulll"
+            },
+            {
+                "name": "DNASTORAGE",
+                "link": "https://www.codechef.com/START43D/status/DNASTORAGE,cvanshulll"
+            }
+        ],
+        "START44D": [
+            {
+                "name": "BIRYANI",
+                "link": "https://www.codechef.com/START44D/status/BIRYANI,cvanshulll"
+            },
+            {
+                "name": "AIRHOCKEY",
+                "link": "https://www.codechef.com/START44D/status/AIRHOCKEY,cvanshulll"
+            }
+        ],
+        "START46D": [
+            {
+                "name": "CNTWRD",
+                "link": "https://www.codechef.com/START46D/status/CNTWRD,cvanshulll"
+            },
+            {
+                "name": "M1ENROL",
+                "link": "https://www.codechef.com/START46D/status/M1ENROL,cvanshulll"
+            },
+            {
+                "name": "SRTARR",
+                "link": "https://www.codechef.com/START46D/status/SRTARR,cvanshulll"
+            }
+        ]
+    },
+    "partially_solved": {
+        "count": 0
+    }
+}
