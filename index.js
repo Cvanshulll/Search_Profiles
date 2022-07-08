@@ -141,7 +141,7 @@ function codechefUserCard(data)
     const userCard = `
     <div class="userCard row-sm">
         <div class="avatar col d-flex justify-content-center ">
-            <img src= "codechef.jpg" alt="${data.user_details.name}" >
+            <img src= "images/codechef.jpg" alt="${data.user_details.name}" >
         </div>
         <div class="details col d-flex justify-content-center">
             <h2 style="color:red; "> ${data.user_details.username} &nbsp;</h2>
