@@ -1,34 +1,25 @@
 console.log("hello");
 
-var api_url = "";
-// console.log(api_url);
+var base = "https://codeforces.com/api/user.info?handles=";
+
+const search = document.getElementById("search");
+const profile = document.getElementById("profile");
+const form = document.getElementById("form");
+const button = document.getElementById("btn1");
+var api_url;
 
 
-function enterUsername() {
-    var x = document.getElementById("username");
-    var username = x.value;
-    if(username != "") 
-    {
-        show();
-        api_url = "https://codeforces.com/api/user.info?handles="+username;
+function getUser(user) {
+    
+        api_url = base+user;
         console.log(api_url);
         getapi(api_url);
-    }
-    else{
-        
-        showEmpty();
-    }
 }
 
 function showEmpty()
 {
-    var profile = document.getElementsByClassName("profile")[0];
-        profile.style.display = "none";
-}
-function show()
-{
-    var profile = document.getElementsByClassName("profile")[0];
-        profile.style.display = "visible";
+    const errorCard = '<div class="errorCard"><h1>Error</h1></div>';
+    profile.innerHTML = errorCard;       
 }
 
 // Defining async function
@@ -40,66 +31,165 @@ async function getapi(url) {
     // Storing data in form of JSON
     var data = await response.json();
     console.log(data);
-    showAvatar(data);
-    showDetails(data);
-
+    // showAvatar(data);
+    // showDetails(data);
+    if(base=="https://codeforces.com/api/user.info?handles=")
+        codeforcesUserCard(data);
+    else if(base=="https://api.github.com/users/")
+        githubUserCard(data),
+        getRepos(url);
+    else if(base=="https://competitive-coding-api.herokuapp.com/api/codechef/")
+        codechefUserCard(data);    
 }
 // Calling that async function
 getapi(api_url);
 
+function getUserId(platform)
+{
+    if(platform=='github')
+    {
+        base = "https://api.github.com/users/";
+        console.log(api_url)
+        search.placeholder = "Enter your Github handle";
+    }
+    if(platform=='codeforces')
+    {
+        base = "https://codeforces.com/api/user.info?handles=";
+        search.placeholder = "Enter your Codeforces handle";
+    }
+    if(platform=='codechef')
+    {
+        base = "https://competitive-coding-api.herokuapp.com/api/codechef/";
+        search.placeholder = "Enter your Codechef handle";
+    }
+}
 
-function showAvatar(data) {
+async function getRepos(username) {
+    
+    const response = await fetch(api_url+'/repos?sort=created');
+        var data = await response.json();
+        addReposToCard(data);
+    
+}
+
+function githubUserCard(user) {
+    const userID = user.name || user.login
+    const userBio = user.bio ? `<p>${user.bio}</p>` : ''
+    const avatar = user.avatar_url;
+    console.log(avatar);
+    const userCard = `
+    <div class="userCard  row-sm">
+        <div class="avatar col d-flex justify-content-center ">
+            <img src= "${avatar}" alt="${userID}" >
+        </div>
+        <div class="details col d-flex justify-content-center">
+        <h2>${userID}</h2>
+        </div>
+        <div class="col d-flex justify-content-center">
+            ${userBio}
+        </div>
+        <div class="col d-flex justify-content-center">
+            <ul style="list-decoration:none;">
+            <li class="d-flex justify-content-center">${user.followers} &nbsp;<strong>Followers</strong></li>
+            <li class="d-flex justify-content-center">${user.following}&nbsp; <strong>Following</strong></li>
+            <li class="d-flex justify-content-center">${user.public_repos}&nbsp; <strong>Repos</strong></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+    `;
+
+    profile.innerHTML = userCard;
+    
+}
+
+function codeforcesUserCard(data)
+{
+
+    const userName = data.result[0].handle;
+    console.log(userName);
     var avatar = data.result[0].titlePhoto;
-    var img = document.createElement("img");
-    img.src = avatar;
-    img.style.borderRadius = "10%";
-    img.style.resize = "contain";
-    img.style.boxShadow = "0px 0px 10px grey";
-    document.getElementsByClassName("imageDiv")[0].appendChild(img);
-}
-
-function showDetails(data)
-{
-    showUserName(data);
-    showRatings(data);
-}
-
-
-function showUserName(data)
-{
-    var handle = data.result[0].handle;
-    var name = document.createElement("h1");
-    name.innerHTML = "Username: ";
-
-    var span = document.createElement("span");
-    span.innerHTML = handle;
-    span.style.color = "blue";
-    name.appendChild(span);
-
     var rank = data.result[0].rank;
-    var span2 = document.createElement("span");
-    span2.innerHTML = ` (${rank})`;
-    span2.style.fontFamily = "sans-serif";
-    name.appendChild(span2);
-    document.getElementsByClassName("username")[0].appendChild(name);
-    name.style.fontSize = "30px";
-}
-
-function showRatings(data)
-{
     var maxRate = data.result[0].maxRating;
-    var maxRating = document.createElement("h1");
-    maxRating.innerHTML = "Max-Rating: ";
-    maxRating.style.fontSize = "20px";
+    var curr = data.result[0].rating;
+    const userCard = `
+    <div class="userCard  row-sm">
+        <div class="avatar col d-flex justify-content-center ">
+            <img src= "${avatar}" alt="${userName}" >
+        </div>
+        <div class="details col d-flex justify-content-center">
+            <h2 > ${userName} &nbsp;</h2>
+            <h5 style="color:blue;"> ${rank}</h5>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <p> Ratings[Max/Curr]:&nbsp;   <strong style="color:red; font-size:20px;"> ${maxRate}</strong>/${curr}</p>    
+            </div>
+        </div>
+    </div>
+    `;
 
-    var span = document.createElement("span");
-    span.innerHTML = maxRate;
-    span.style.color = "blue";
-    span.style.fontSize = "30px";
-    maxRating.appendChild(span);
-
-    
-    document.getElementsByClassName("username")[0].appendChild(maxRating);
-    
+    profile.innerHTML = userCard;
 }
+
+function codechefUserCard(data)
+{
+    const username = data.user_details.username;
+    console.log(username);
+    const rating = data.rating;
+    console.log(rating);
+    const name =data.name;
+    const userCard = `
+    <div class="userCard row-sm">
+        <div class="avatar col d-flex justify-content-center ">
+            <img src= "codechef.jpg" alt="${data.user_details.name}" >
+        </div>
+        <div class="details col d-flex justify-content-center">
+            <h2 style="color:red; "> ${data.user_details.username} &nbsp;</h2>
+            <h4 style="color:blue;"> ${data.stars}</h4>
+        </div>
+        <div class="details col d-flex justify-content-center">
+        <ul>
+        <li class="d-flex justify-content-center">Rating: &nbsp;<strong> ${data.rating} </strong></li>
+        <li class="d-flex justify-content-center">Problems Fully Solved:&nbsp; <strong> ${data.fully_solved.count}</strong></li>
+        <li class="d-flex justify-content-center">Name: ${data.user_details.name}</li>
+      </ul>
+        </div>
+            
+        </div>
+    </div>
+    `;
+    
+    profile.innerHTML = userCard;
+}
+
+function addReposToCard(repos) {
+    const reposEl = document.getElementById('repos');
+
+    repos
+        .slice(0, 5)
+        .forEach(repo => {
+            const repoEl = document.createElement('a')
+            repoEl.classList.add('repo')
+            repoEl.href = repo.html_url
+            repoEl.target = '_blank'
+            repoEl.innerText = repo.name
+
+            reposEl.appendChild(repoEl);
+        })
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const user = search.value;
+    
+    console.log(user);
+    if(user)
+    {
+        getUser(user);
+
+        search.value='';
+    }
+    
+});
+
 
