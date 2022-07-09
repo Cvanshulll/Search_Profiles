@@ -16,33 +16,41 @@ function getUser(user) {
         getapi(api_url);
 }
 
-function showEmpty()
-{
-    const errorCard = '<div class="errorCard"><h1>Error</h1></div>';
-    profile.innerHTML = errorCard;       
-}
+
 
 // Defining async function
 async function getapi(url) {
     
     // Storing response
     const response = await fetch(url);
-    
+    if(response.status!=200)
+    {
+        showEmpty();
+    }
     // Storing data in form of JSON
     var data = await response.json();
     console.log(data);
-    // showAvatar(data);
-    // showDetails(data);
-    if(base=="https://codeforces.com/api/user.info?handles=")
+    console.log(data.status);
+   
+        if(base=="https://codeforces.com/api/user.info?handles=")
         codeforcesUserCard(data);
     else if(base=="https://api.github.com/users/")
         githubUserCard(data),
         getRepos(url);
     else if(base=="https://competitive-coding-api.herokuapp.com/api/codechef/")
         codechefUserCard(data);    
+    // showAvatar(data);
+    // showDetails(data);
+    
 }
 // Calling that async function
 getapi(api_url);
+
+function showEmpty()
+{
+    const errorCard = '<div class="errorCard"><h1>Error</h1></div>';
+    profile.innerHTML = errorCard;       
+}
 
 function getUserId(platform)
 {
