@@ -181,7 +181,7 @@ function codechefUserCard(data)
             <img src= "images/codechef.jpg" alt="${data.user_details.name}" >
         </div>
         <div class="details col d-flex justify-content-center">
-            <h2 style="color:red; "> ${data.user_details.username} &nbsp;</h2>
+            <h2 > ${data.user_details.username} &nbsp;</h2>
             <h4 style="color:blue;"> ${data.stars}</h4>
         </div>
         <div class="details col d-flex justify-content-center">
