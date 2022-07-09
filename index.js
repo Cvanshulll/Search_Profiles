@@ -110,7 +110,44 @@ function codeforcesUserCard(data)
     console.log(userName);
     var avatar = data.result[0].titlePhoto;
     var rank = data.result[0].rank;
-    var maxRate = data.result[0].maxRating;
+    var rankColor="black";
+    if(rank=="pupil")
+    {
+        rankColor="#008000";
+    }
+    else if(rank=="newbie")
+    {
+        rankColor="#808080";
+    }
+    else if(rank=="specialist")
+    {
+        rankColor="#03a89e";
+    }
+    else if(rank=="expert")
+    {
+        rankColor="#0000ff";
+    }	
+    else if(rank=="legendary grandmaster")
+    {
+        rankColor="#ff0000";
+    }
+    else if(rank=="international master")
+    {
+        rankColor="#ff8c00";
+    }
+    else if(rank=="candidate master")
+    {
+        rankColor="#a0a";
+    }
+    else if(rank=="master")
+    {
+        rankColor="#ff8c00";
+    }
+    else if(rank=="Grandmaster")
+    {
+        rankColor="#ff0000";
+    }
+    
     var curr = data.result[0].rating;
     const userCard = `
     <div class="userCard  row-sm">
@@ -119,10 +156,10 @@ function codeforcesUserCard(data)
         </div>
         <div class="details col d-flex justify-content-center">
             <h2 > ${userName} &nbsp;</h2>
-            <h5 style="color:blue;"> ${rank}</h5>
+            <h5 id="rank" style="color:${rankColor}"> ${rank}</h5>
             </div>
             <div class="col d-flex justify-content-center">
-                <p> Ratings[Max/Curr]:&nbsp;   <strong style="color:red; font-size:20px;"> ${maxRate}</strong>/${curr}</p>    
+                <p> Ratings[Max/Curr]:&nbsp;   <strong style="color:red; font-size:20px;"> ${data.result[0].maxRating}</strong>/${curr}</p>    
             </div>
         </div>
     </div>
@@ -192,4 +229,21 @@ form.addEventListener("submit", (e) => {
     
 });
 
-
+function changeBg(color)
+{
+    if(color=='purple')
+    {
+        document.body.style.backgroundColor = '#9DAAF2';
+        document.getElementById(color).style.boxShadow = '0px 0px 10px #9DAAF2';
+    }
+    else if(color=='yellow')
+    {
+        document.body.style.backgroundColor = '#F4DB7D';
+        document.getElementById(color).style.boxShadow = '0px 0px 10px #9DAAF2';
+    }
+    else if(color=='grey')
+    {
+        document.body.style.backgroundColor = '#C39EA0';
+        document.getElementById(color).style.boxShadow = '0px 0px 10px #9DAAF2';
+    }
+}

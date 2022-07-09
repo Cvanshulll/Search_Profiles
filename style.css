@@ -5,9 +5,46 @@ body{
     align-items: center;
     background-color:#FDF5DF;
 }
+.main{
+    margin-top: 3px;;
+}
+.circle{
+    width:20px;
+    height:20px;
+    border-radius: 50% ;
+    display: inline-block;
+    border: 1px solid black;
+}
+#purple{
+    background-color: #9DAAF2;
+}
+#yellow{
+    background-color: #F4DB7D;
+}
+#grey{
+    background-color: #C39EA0;
+}
+#star
+{ 
+    width: 63px;
+    height:20px;
+    border-radius: 4px;
+    padding: 2px;
+    padding-bottom: 25px;
+    border: 1px solid #e9ecef;
+    background-color: #f6f8fa;
+}
+#star a{
+    color: black;
+    text-decoration: none;
+}
+#star a:hover{
+    color: #007bff;
+}
 #form{
     display:flex;
     justify-content: center;
+    
 }
 
 
@@ -58,6 +95,9 @@ ul{
         margin: 300px;
         margin-top: 50px;
         margin-bottom: 10px;
+    }
+    .main{
+        margin-top: 60px;;
     }
     }
     
