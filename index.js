@@ -28,7 +28,8 @@ async function getapi(url) {
         showEmpty('');
     }
     // Storing data in form of JSON
-    var data = await response.json();
+    else{
+        var data = await response.json();
     if(data.status=='FAILED')
     {
         showEmpty(data.comment.slice(9));
@@ -41,7 +42,8 @@ async function getapi(url) {
         githubUserCard(data),
         getRepos(url);
     else if(base=="https://competitive-coding-api.herokuapp.com/api/codechef/")
-        codechefUserCard(data);    
+        codechefUserCard(data); 
+    }   
     // showAvatar(data);
     // showDetails(data);
     
