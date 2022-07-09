@@ -25,11 +25,14 @@ async function getapi(url) {
     const response = await fetch(url);
     if(response.status!=200)
     {
-        showEmpty();
+        showEmpty('');
     }
     // Storing data in form of JSON
     var data = await response.json();
-    console.log(data);
+    if(data.status=='FAILED')
+    {
+        showEmpty(data.comment.slice(9));
+    }
     console.log(data.status);
    
         if(base=="https://codeforces.com/api/user.info?handles=")
@@ -46,9 +49,9 @@ async function getapi(url) {
 // Calling that async function
 getapi(api_url);
 
-function showEmpty()
+function showEmpty(msg)
 {
-    const errorCard = '<div class="errorCard"><h1>Error</h1></div>';
+    const errorCard = `<div class="errorCard col mt-5 d-flex justify-content-center"><h1>${msg}</h1></div>`;
     profile.innerHTML = errorCard;       
 }
 
