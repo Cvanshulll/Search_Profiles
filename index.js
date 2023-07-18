@@ -1,4 +1,4 @@
-console.log("hello");
+// console.log("hello");
 
 var base = "https://codeforces.com/api/user.info?handles=";
 
@@ -8,14 +8,26 @@ const form = document.getElementById("form");
 const button = document.getElementById("btn1");
 var api_url;
 
+const btnPlaces = document.querySelectorAll('.search-btn');
 
-function getUser(user) {
-    
-        api_url = base+user;
-        console.log(api_url);
-        getapi(api_url);
+for (let i = 0; i < btnPlaces.length; i++) {
+  btnPlaces[i].addEventListener("click", function(e) {
+    let prevBtn = document.querySelector(".checked");
+    if (prevBtn) {
+      prevBtn.classList.remove("checked");
+      e.target.classList.add("checked");
+    } else {
+      e.target.classList.add("checked");
+    }
+  });
 }
 
+
+function getUser(user) {
+        api_url = base+user;
+        // console.log(api_url);
+        getapi(api_url);
+}
 
 
 // Defining async function
@@ -25,7 +37,7 @@ async function getapi(url) {
     const response = await fetch(url);
     if(response.status!=200)
     {
-        showEmpty('');
+        showEmpty(`Search Profiles.....`);
     }
     // Storing data in form of JSON
     else{
@@ -34,20 +46,18 @@ async function getapi(url) {
     {
         showEmpty(data.comment.slice(9));
     }
-    console.log(data.status);
    
-        if(base=="https://codeforces.com/api/user.info?handles=")
+    if(base=="https://codeforces.com/api/user.info?handles=")
         codeforcesUserCard(data);
     else if(base=="https://api.github.com/users/")
         githubUserCard(data),
         getRepos(url);
-    else if(base=="https://competitive-coding-api.herokuapp.com/api/codechef/")
+    else if(base=="https://codechef-api.vercel.app/")
         codechefUserCard(data); 
     }   
-    // showAvatar(data);
-    // showDetails(data);
     
 }
+
 // Calling that async function
 getapi(api_url);
 
@@ -62,7 +72,6 @@ function getUserId(platform)
     if(platform=='github')
     {
         base = "https://api.github.com/users/";
-        console.log(api_url)
         search.placeholder = "Enter your Github handle";
     }
     if(platform=='codeforces')
@@ -72,7 +81,7 @@ function getUserId(platform)
     }
     if(platform=='codechef')
     {
-        base = "https://competitive-coding-api.herokuapp.com/api/codechef/";
+        base = "https://codechef-api.vercel.app/";
         search.placeholder = "Enter your Codechef handle";
     }
 }
@@ -82,16 +91,16 @@ async function getRepos(username) {
     const response = await fetch(api_url+'/repos?sort=created');
         var data = await response.json();
         addReposToCard(data);
-    
 }
 
 function githubUserCard(user) {
+    // console.log(user);
     const userID = user.name || user.login
     const userBio = user.bio ? `<p>${user.bio}</p>` : ''
     const avatar = user.avatar_url;
-    console.log(avatar);
+    // console.log(avatar);
     const userCard = `
-    <div class="userCard  row-sm">
+    <div class="userCard  my-2 ">
         <div class="avatar col d-flex justify-content-center ">
             <img src= "${avatar}" alt="${userID}" >
         </div>
@@ -102,11 +111,14 @@ function githubUserCard(user) {
             ${userBio}
         </div>
         <div class="col d-flex justify-content-center">
-            <ul style="list-decoration:none;">
-            <li class="d-flex justify-content-center">${user.followers} &nbsp;<strong>Followers</strong></li>
-            <li class="d-flex justify-content-center">${user.following}&nbsp; <strong>Following</strong></li>
-            <li class="d-flex justify-content-center">${user.public_repos}&nbsp; <strong>Repos</strong></li>
+            <ul style="list-decoration:none;" class="d-flex justify-content-evenly ">
+            <li class="  mx-2">${user.followers}&nbsp;<strong>Followers</strong></li>
+            <li class="  mx-2">${user.following}&nbsp;<strong>Following</strong></li>
+            <li class="  mx-2">${user.public_repos}&nbsp;<strong>Public Repositories</strong></li>
             </ul>
+        </div>
+        <div class=" col d-flex justify-content-center">
+            <button class="profile-link"><a href=${user.html_url} target="_blank">Profile</a></button>
         </div>
     </div>
   </div>
@@ -118,9 +130,8 @@ function githubUserCard(user) {
 
 function codeforcesUserCard(data)
 {
-
     const userName = data.result[0].handle;
-    console.log(userName);
+    // console.log(data);
     var avatar = data.result[0].titlePhoto;
     var rank = data.result[0].rank;
     var rankColor="black";
@@ -160,6 +171,8 @@ function codeforcesUserCard(data)
     {
         rankColor="#ff0000";
     }
+
+    var pro = `https://codeforces.com/profile/${userName}`;
     
     var curr = data.result[0].rating;
     const userCard = `
@@ -172,8 +185,11 @@ function codeforcesUserCard(data)
             <h5 id="rank" style="color:${rankColor}"> ${rank}</h5>
             </div>
             <div class="col d-flex justify-content-center">
-                <p> Ratings[Max/Curr]:&nbsp;   <strong style="color:red; font-size:20px;"> ${data.result[0].maxRating}</strong>/${curr}</p>    
+                <p> <strong>Ratings</strong>:&nbsp;   <strong style="color:red; font-size:20px;"> ${data.result[0].maxRating}</strong>(max) / ${curr}(curr)</p>    
             </div>
+            <div class=" col d-flex justify-content-center">
+            <button class="profile-link"><a href=${pro} target="_blank">Profile</a></button>
+        </div>
         </div>
     </div>
     `;
@@ -183,10 +199,11 @@ function codeforcesUserCard(data)
 
 function codechefUserCard(data)
 {
+    // console.log(data);
     const username = data.user_details.username;
-    console.log(username);
+    // console.log(username);
     const rating = data.rating;
-    console.log(rating);
+    // console.log(rating);
     const name =data.name;
     const userCard = `
     <div class="userCard row-sm">
@@ -232,7 +249,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     const user = search.value;
     
-    console.log(user);
+    // console.log(user);
     if(user)
     {
         getUser(user);
@@ -244,19 +261,21 @@ form.addEventListener("submit", (e) => {
 
 function changeBg(color)
 {
-    if(color=='purple')
+    if(color=='green')
     {
-        document.body.style.backgroundColor = '#9DAAF2';
-        document.getElementById(color).style.boxShadow = '0px 0px 10px #9DAAF2';
+        document.body.style.backgroundColor = '#19ffabc3';
+    }
+    else if(color=='red')
+    {
+        document.body.style.backgroundColor = 'paleturquoise';
     }
     else if(color=='yellow')
     {
         document.body.style.backgroundColor = '#F4DB7D';
-        document.getElementById(color).style.boxShadow = '0px 0px 10px #9DAAF2';
     }
-    else if(color=='grey')
-    {
+    else{
         document.body.style.backgroundColor = '#C39EA0';
-        document.getElementById(color).style.boxShadow = '0px 0px 10px #9DAAF2';
     }
 }
+
+
